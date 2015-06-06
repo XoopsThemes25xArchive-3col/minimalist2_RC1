@@ -1,0 +1,84 @@
+@charset "iso-8859-1";
+/*******************************************************************************
+*  based on skidoo_too_print.css : 2004.11.26
+* -----------------------------------------------------------------------------
+*  Ported By Ianez for Minimalist 2.0 - 01/2008
+*******************************************************************************/
+
+#leftcol, #rightcol, #centercol, #SOWrap
+{
+	float: none;	/* since left and right columns are being hidden,
+			   there's no need to float any columns. */
+}
+html>body #SOWrap
+{
+	width: auto;	/* help Opera out */
+}
+
+#rightcol, #leftcol, .menu, .headright, .footright, .printHide, .hide, #ghostnav
+{
+	display: none;	/* hide the left and right columns as well as the
+			   horizontal navigation element(s). also hide any
+			   designated elements that should not be pritned */
+}
+#container, #innerContainer, #pageWrapper
+{
+	border-width: 0;	/* hide various borders, including those used
+				   to create the backgrounds for the left and
+				   right columns */
+}
+
+.inside, .headleft, { margin:0; padding:0; }
+
+#header
+{
+	border-bottom: solid 1px #000;
+	border-width: 0 0 1px 0;
+	padding: 0.5em 0;		
+	margin-bottom: 18px 0;
+}
+
+h1, h3 { margin: 3px 0; padding:0; }
+
+
+#footer
+{
+	border: solid 1px #000;
+	border-width:1px 0;
+	padding: 0.5em 0;		
+	margin-top: 15px 0;
+}
+
+* html #footer
+{
+	/* \*/
+		margin-top:	1em;
+	/* help IE print space between the content and footer */
+}
+a, a:link, a:visited
+{
+	text-decoration: none;
+	background-color: inherit;
+	color: inherit; /* we're printing, so there's no need to
+				   differentiate links from regular text. so
+				   remove any formatting the links get. */
+}
+
+body *
+{
+	background-color: #fff;
+	color: #000;		/* simple catch-all to make sure we have no
+				   colored items in the print out. delete this
+				   if you want. */
+}
+
+#hideRight { display: none; }
+#hideLeft { display: none; }
+#hideAll_left { display: none; }
+#hideAll_right { display: none; }
+#showLeft { display: none; }
+#showRight { display: none; }
+#activeLeft { display: none; }
+#activeRight { display: none; }
+
+#xo-logger-output {display:none;}

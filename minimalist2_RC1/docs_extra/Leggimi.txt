@@ -1,0 +1,71 @@
+---------------------------------------------------------
+----- MINIMALIST ----------------------------------------
+---------------------------------------------------------
+-- TEMA ACCESSIBILE PER XOOPS  --------------------------
+---------------------------------------------------------
+
+
+Minimalist nasce dall'esigenza di creare un layout per Xoops che risponda a tre principali esigenze:
+accessibilità, usabilità e flessibilità.
+L'obiettivo è quello di costituire un tema base, semplice ma solido che si accessibile ad ogni tipo di utenza, sul numero maggiore possibile di browser
+e con un'impostazione che permetta sempre la massima leggibilità dei contenuti e immediatezza nella personalizzazione.
+
+Non è un tema graficamente evoluto e particolarmente curato nell'aspetto, poichè vuole costituirsi come punto di partenza
+per quanti intendono sviluppare un layout privo di tabelle per xoops, con possibilità di 1/2/3 colonne (in automatico).
+E' un tema orientato agli sviluppatori e alla loro fantasia ma è comunque assolutamente utilizzabile e completo di tutti gli elementi necessari per Xoops.
+
+
+
+Info e supporto
+----------------
+Tutte le informazioni sulla struttura e le caratteristiche le trovate nella cartella /docs_extra
+Per le modifiche alle versioni leggete il file changelog_IT.txt
+
+Per assistenza e segnalazione bug: www.xoopsitalia.org
+Demo: xoopsworks.isgreat.org
+
+
+Crediti
+----------------
+Creato e Sviluppato da: Ianez [Davide Foresti] - Co Webmaster Xoops Italia [Comunità di supporto italiano a Xoops - www.xoopsitalia.org]
+
+Struttura base: Skidoo Too Theme http://webhost.bridgew.edu/etribou/layouts/skidoo_too/)
+
+JavaScript: styleswitcher.js da quest'articolo di A List Apart, http://www.alistapart.com/stories/alternate/
+
+Css per la stampa: basato sul layout originale Skidoo Too
+
+Css Alto Contrasto: concetto riginale di davide@bazzmann.it, marco@bazzmann.it
+
+Un particolare ringraziamento ai miei colleghi Defkon1 e Slyss di XoopsItalia.org,
+per l'aiuto nel debuge i suggerimenti per layout e caratteristiche e a tutta la comunità di XoopsItalia,
+per il supporto e la collaborazione.
+
+
+Licenza
+----------------
+Questo codice viene da lavori opensource e rimane quindi totalmente aperto e ridistribuile.
+I crediti e le note commentate sui singoli file devono essere mantenute.
+Una nota a fondo sito sul tema utilizzato è sempre gradita.
+
+Sono permessi:
+- L'utilizzo per uso commerciale/personale anche su siti di clienti
+- L'utilizzo come base per un proprio tema
+
+Non sono permessi:
+- Il download diretto del tema dal proprio sito (linkare sempre da xoopsitalia.org)
+- La redistribuzione a fini di lucro di questo codice.
+- La rivendita di questo tema come prodotto proprio.
+
+
+Se questo lavoro vi piace una donazione all nostra comunità è sempre apprezzata,
+con PayPal da questa pagina: http://www.xoopsitalia.org/donazione.php, specificando 'Donazione Minimalist' come causale.
+
+
+--------------------------------------------------------------
+-- Creato da Ianez - Xoops Italia Staff - www.xoopsitalia.org
+--------------------------------------------------------------
+--------------------------------------------------------------
+-- Please Share Ideas & Save credits -------------------------
+--------------------------------------------------------------
+

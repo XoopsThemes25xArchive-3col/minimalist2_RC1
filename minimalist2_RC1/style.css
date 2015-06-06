@@ -1,0 +1,693 @@
+@charset "iso-8859-1";
+/* Basic style for Minimalist - Version 2.0 - Last update 15/02/2008 for XOOPS                  
+********************************************************************************/
+
+/* (1) HTML TAG
+************************************************/
+body, html {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.8em;
+}
+
+table { width: 100%; padding:0; margin:0; font-size:100%;}
+
+pre, code, blockquote { margin: 0; padding:0;}
+
+img { border-width:0; }
+
+	/* Link visualization */
+a, a:link { color: #B00000; text-decoration: none; }
+a:hover {text-decoration: underline; color: #C10000; }
+a:active {color: #B00000;}
+a:focus {outline: none;}
+a:visited { color: #B00000;} 
+
+	/*Headings*/
+h1 { margin: 0px; padding: 0; font-size: 180%; }
+
+h2 { margin: 0px; padding: 0; font-size: 150%; }
+
+h3 { margin: 0px; padding: 0; font-size: 130%; }
+
+h4 { margin: 0px; padding: 2px; font-size: 110%; }
+
+h5 { margin: 0px; padding: 0; font-size: 90%; }
+
+h6 { margin: 0px; padding: 0; font-size: 75%; }
+
+	/* List formatting*/
+ul, ol, dl { margin: 5px 0 5px 12px; padding: 0px; text-align: left; }
+
+ol li {
+	margin: 4px 0 4px 18px;
+	padding: 0px;
+	list-style: decimal outside none;
+	color: #333333;
+}
+
+ul li {
+	margin-left: 10px;
+	padding: 0;
+	list-style: square outside;
+	color: #333333;
+	text-align: left;
+}
+
+	/* Form */
+form { margin: 0; padding: 0; }
+
+acronym, abbr { cursor: help; }
+
+textarea {
+	border: 1px solid #CCCCCC;
+	width: 90%;
+	color: #333333;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	font-size: 11px;
+	height: 200px;
+	overflow: auto; /*shows scrollbars in IE only if needed*/
+}
+
+button, select {border: 1px #CCCCCC solid; background-color: white; font-size: 11px; }
+
+input {font-size: 11px;}
+
+input[type=text], input[type=password] { border: 1px solid #B5B5B5 ; font-size: 11px; padding:0; color: #000000; height:14px;}
+
+input[type=button], input[type=submit], input[type=reset], .formButton {
+	border: 1px  #666666 solid;
+	background-color: #EAEAEA;
+	font-size: 11px;
+	cursor: pointer;
+	color: #000000;
+}
+
+input[type=radio], input.formRadio { background: #FFFFFF; text-align: left; margin: 1px 2px; }
+
+input[type=checkbox], input.checkbox { border: 0px #FEFEFE solid  ;  margin: 1px 2px; text-align: right; padding: 0; }
+
+	/*Hover and focus effects - Works only on Firefox/NS..*/
+input:hover, textarea:hover, input.formButton:hover {
+	border: 1px solid #999999;
+	color: #000000 !important;
+	background-color: #F5F5F5;
+}
+
+input[type=text]:focus, input[type=password]:focus, textarea:focus{ border: 1px solid #9F9F9F; background-color: #FFFFFF; font-size: 11px; }
+
+
+
+
+/* (2) THEME LAYOUT (!Your fantasy zone!)
+************************************************/
+
+body {
+	margin: 0 20px;	/* margin instead of padding for the gutterspace around 
+	 			   the layout because IE breaks the layout when 
+	 			   horizontal padding is applied to the body element.
+	 			   % over pixels for that horizontal gutterspace so that
+	 			   it automatically goes below 20px on low-res browsers
+	 			   to create more space for the content. */
+	font-size: 100.1%;	/* resolve some font size issues in some layouts for
+				   some browsers. (in other words, i got no clue.) background-color: #0088CE; #7DA5C4*/
+	background-color: #FF9933;
+	padding: 0;
+}
+
+#wrapper {
+	min-width: 890px;	/* IE doens't understand this property. EMs are used
+				   so that as the font size increases, the proportional
+				   limitations (min-width) increase with it, rather
+				   than creating a middle column that can only fit
+				   3 or 4 characters in it. */
+	margin: 0;
+	border: 1px solid  #666666;
+	border-width:0 1px 1px 1px;	
+}
+
+.pageWidth {
+
+	width: auto;	 
+	background-color: #ffffff;
+	padding:0;
+}
+
+	/* Important for having a min-width in IE
+	**	Hack ported from http://www.cssplay.co.uk/boxes/minwidth.html */
+* html #wrapper {border-left:840px solid #fff; position:relative; float:left; z-index:1;}
+* html .pageWidth {display:inline-block; position:relative; margin-left:-840px; float:left; z-index:2; border-left: 1px solid  #666666; }
+
+	/* Header */
+#header {
+	border-bottom: solid 1px #A9A9A9;
+	padding: 0;
+	padding-bottom:0px;
+	height:auto;
+	background-color: #F5f5f5;
+}
+
+.headleft {
+	height: 62px;
+	padding: 13px 0px 14px 12px;	
+}
+
+.headleft h1 {
+	margin-bottom: 0px;
+	font-size: 2.30em;
+	font-weight: normal;	
+	padding: 0;
+}
+
+.headleft h1 a:link, .headleft h1 a:visited {color: #444444; }
+
+.headleft h3 {
+	padding:0; 
+	font-weight: normal; 
+	font-size: 1.30em; 
+	margin:0;
+	letter-spacing: 0.20px;
+	color: #0075B0;
+}
+
+.headright {
+	height: 50px;
+	float: right;
+	width:400px;
+	text-align:right ;
+	padding:3px 14px 0 5px;
+}
+
+.headright p {
+	margin: 2px 0;
+	padding-top: 3px;
+}
+
+#searchbox {
+	text-align: right;	
+	white-space: nowrap;
+	padding-top:10px;
+	height: 10px;
+}
+
+#searchbox .search_butt {
+	border: 1px solid #888888;
+	background-color: #8DC6E3;
+}
+
+#searchbox .search_butt:hover {border: 1px  #333333 solid;}
+
+	
+	/* Header Horizontal Area and Menu */
+#headerbar {
+	padding:0; 
+	height:auto;
+	background-color: #f7f7f7;
+	text-align: center;
+	border-top: solid 1px #a9a9a9;
+	margin: 0 auto;
+	font-size: 0.95em;
+	width: 100%;
+}
+
+.menu {
+  display: inline;
+  padding:0;  
+  list-style-type:none;
+  white-space:nowrap;    /* keep text on one line */
+  border:1px solid #a9a9a9; /* add a border to show size of menu */
+  border-width: 0;
+  background-color: transparent;
+}
+
+.menu li {
+	display: inline;
+	padding: 0px;
+	margin: 0 -2px; /* keeps tabs close to each others */
+}
+
+.menu a, .menu a:visited {
+  padding: 7px 16px 7px 16px;
+  background-color: transparent; 
+  border:1px solid #a9a9a9; /* add a 1px border around items */  
+  border-width: 0px 1px 0 0px;
+  text-decoration:none;
+  line-height: 28px;
+  margin: 0;
+  overflow:hidden;
+}
+
+.menu a.first-tab:link, .menu a.first-tab:visited {
+  border:1px solid #a9a9a9; 
+  border-width: 0px 1px 0 1px;
+}
+
+.menu a:hover, .menu a.first-tab:hover { 
+  background-color: #0088CC;
+  text-decoration:none;
+  color: #ffffff;
+ 
+}
+
+.centered {margin:0 auto;}
+.lefted {margin:0 auto 0 0;}
+.righted {margin:0 0 0 auto;}
+
+		/* Hiding id/classes for toggling column buttons */		
+.togglerLeft {
+	position: absolute;
+	top:93px;
+	left: 33px;
+	width: 45px;
+	font-size: 1em;
+	padding:2px 0;
+}
+
+.togglerRight {
+	position: absolute;
+	top:93px;
+	right: 35px;
+	float: right;
+	width: 20px;
+	font-size: 1em;
+	padding:2px 0;
+	background-color: #f5f5f5;
+}
+
+* html .togglerRight { top:92px; right: 14px;}
+* html .togglerLeft { top:92px; left: 12px;}
+
+.togglerRight a:link, .togglerLeft a:link, .togglerRight a:visited, .togglerLeft a:visited  { 
+	color:#990000;
+	font-weight: normal;
+}
+
+.togglerRight a:hover, .togglerLeft a:hover  { 
+	text-decoration: none; 
+	color:#0088CC;
+	font-weight: bold;
+}
+		
+#hideRight { display: none; }
+#hideLeft { display: none; }
+#hideAll_left { display: none; }
+#hideAll_right { display: none; }
+#showLeft { display: none; }
+#showRight { display: none; }
+#showAll { display: none; }
+
+		/* Accessibility  classes/id*/
+#ghostnav {
+	position:absolute;
+	left:0px;
+	top:-500px;
+	width:1px;
+	height:1px;
+	overflow:hidden;
+}
+
+#acswitch {
+	width:auto;
+	height: 12px;
+	text-align: right;	
+	font-size: 0.85em;
+	white-space: nowrap;
+	padding-right: 0px;	
+}
+
+#acswitch a {color:#990000;}
+
+.bscss { display: none; }
+
+
+/* MAIN CONTAINER */
+#container {
+	/* reserves space for the left and right columns. you can use either
+	 * padding, margins, or borders, depending on your needs. however you
+	 * can use the border method to create a background color for both left
+	 * and right columns
+	 */
+	border-left: solid 13em #ffffff; /* Width must be equal to leftcol width */
+	border-right: solid 13em #ffffff;	/* Width must be equal to rightcol width */
+}
+
+#container_noRcol /* reserves space for the left column */ {	
+	border-left: solid 13em #ffffff;
+	border-right: solid 0.07em #ffffff; /* Important for keeping borders OK */
+}
+
+#container_nocol /* for no column layout */{	
+	border-left: solid 0.07em #ffffff; /* Important for keeping borders OK */
+	border-right: solid 0.07em #ffffff; /* Important for keeping borders OK */
+}
+
+#container_noLcol /* freserves space for the right column */{	
+	border-left: solid 0.07em #ffffff; /* Important for keeping borders OK */
+	border-right: solid 13em #ffffff;
+}
+
+#innerContainer, #innerContainer_nocol {
+	border: solid 1px #eeeeee; /*set a line between the columns*/
+	border-width: 0 1px;
+	margin: 0 -1px;		/* compensate for the borders because of 100% width declaration */
+	background-color: #ffffff;  /*This set the center column backgorund */
+	width: 100%;
+	z-index: 1;
+}
+
+#leftcol, #centercol, #rightcol, * html #SOWrap {
+	overflow: visible;	/* fix for IE italics bug */
+	position: relative;	/* fix some rendering issues */
+}
+
+#SOWrap
+{
+	float: left;
+	margin: 0 -1px 0 0;
+	width: 100%;
+	z-index: 3;
+}
+
+#centercol
+{
+	float: right;
+	margin-left: -1px;
+	width: 100%;
+	z-index: 4;
+}
+
+#leftcol
+{
+	float: left;
+	margin: 0 1px 0 -13em; /* important for Opera compatibility*/
+	width: 13em;
+	z-index: 5;
+}
+
+#rightcol
+{
+	float: right;
+	width: 13em;
+	margin: 0 -13em 0 1px; /* important for Opera compatibility*/
+	z-index: 4;
+	
+}
+
+
+	/* Footer */
+#footer {
+	border-top: solid 1px #a9a9a9;
+	margin-top: 0px;
+	font-size: 0.85em;
+	height: 35px;
+	background-color: #F5F5F5;
+}
+
+.footleft {
+	float: left;
+	padding: 10px 10px;
+}
+
+.footright {
+	float: right;
+	width:auto;
+	padding-bottom: 0px;
+	padding: 10px 10px;
+}
+
+.footright img {
+	vertical-align: middle;
+}
+
+
+
+/* (3) GENERAL PURPOSE ID/CLASSES
+************************************************/
+.clear {
+	clear: both;
+	padding-bottom: 1px;	/* for Gecko-based browsers */
+	margin-bottom: -1px;	/* for Gecko-based browsers */
+}
+
+.hide { display: none; }
+
+.hidden { position: absolute; top: -1000em; width:0px;}
+
+.inside {
+	/* glitch in IE caused by vertical padding in this class, so 0 padding is
+	 * set here and those blocks that need the vertical padding must be 
+	 * applied to the parent element. the purpose of this class is to provide
+	 * horizontal padding without using hacks to get around IE's broken box 
+	 * model. so it's okay to apply vertical padding to the parent element, 
+	 * just not horizontal padding.padding: 0 1em;
+	 */
+	padding:0 12px;
+}
+
+			/* Used for text positioning/grouping (in blocks or else) */
+.top-divider { margin-top:6px; }
+.divider { padding:4px 0; }
+.center { text-align: center; margin: 0 auto; }
+
+
+/* (4) REQUESTED/USED BY XOOPS 
+************************************************/
+
+/* Main Classes for table's sections visualization/discrimination */
+.outer { border:1px solid #C9D8ED;}
+
+.head {border-bottom: 1px solid #CECECE; padding: 3px 4px 3px 7px; background-color: #D8E8F1; border-right: 1px solid #CFCFCF; color:#444444;}
+
+.even {background-color:#F3F7FA; padding: 3px 4px 3px 7px; line-height: 16px; border-bottom: 1px solid #D6D6D6; border-top: 0px solid #ffffff; border-right: 1px solid #DCDCDC;}
+
+.odd {background-color:#F9F9F9; padding: 3px 4px 3px 7px; line-height: 16px; border-bottom: 1px solid #D6D6D6; border-right: 1px solid #DCDCDC; border-top: 0px solid #ffffff;}
+
+.foot {padding: 3px 3px; border-top: 1px solid #EEEEEE; border-bottom: 1px solid #DCDCDC; background-color: #FCFCFC; }
+
+tr.even td {padding: 3px 3px; border-bottom: 1px solid #DCDCDC; border-right: 1px solid #DCDCDC;}
+
+tr.odd td {padding: 3px 3px; border-bottom: 1px solid #DCDCDC; border-right: 1px solid #DCDCDC;}
+
+tr.head td { border-bottom: 1px solid #C0C0C0; padding: 4px 5px; font-weight: bold; border-right: 1px solid #C0C0C0; border-left: 0px solid #F5F5F5;}
+
+th { border-bottom: 1px solid #C0C0C0; border-right: 1px solid #C0C0C0; border-left: 1px solid #F5F5F5; background-color: #C4D6E5; padding: 4px 6px; color:#3C3C3C;}
+
+/* COLUMNS LAYOUT */
+
+	/* Center (including normal and bottom blocks) */
+#centercolumn {margin:10px 0px;}
+#centercolumn a {color:#003399;}
+
+#centercolumn th { }
+
+#centerCcolumn, #bottomCcolumn { }
+
+#centerCcolumn .blockTitle, #bottomCcolumn .blockTitle { 
+	font-weight: normal;
+	font-size: 1.6em;
+	padding: 0 0 2px 0;
+}
+
+#centerCcolumn .blockContent, #bottomCcolumn .blockContent {
+	line-height: 16px;
+	border-bottom: 1px solid #dcdcdc;
+	margin: 0 0 25px 0;
+	padding: 0 0 8px 0;
+ }
+
+#centerLcolumn, #bottomLcolumn, #centerRcolumn, #bottomRcolumn { width: 46%; padding:2px 2px; ; margin:10px 3px 5px 0;  }
+
+#centerLcolumn, #bottomLcolumn { float: left;} /* Important in tableless layouts*/
+#centerRcolumn, #bottomRcolumn { float: right; } 
+
+#centerLcolumn .blockTitle, #bottomLcolumn .blockTitle, #centerRcolumn .blockTitle, #bottomRcolumn .blockTitle {
+	font-weight: normal;
+	font-size: 1.6em;
+	padding: 0 0 2px 0;
+}
+
+#centerLcolumn .blockContent, #centerRcolumn .blockContent, #bottomLcolumn .blockContent, #bottomRcolumn .blockContent {
+	line-height: 16px;
+	border-bottom: 1px solid #dcdcdc;
+	margin: 0 0 25px 0;
+	padding: 0 0 8px 0;
+ }
+
+div#content { text-align: left; width: 100%; }
+
+	/* Sides */
+#leftcolumn {margin:15px 0px;}
+
+#leftcolumn th { }
+
+#leftcolumn div.blockTitle {
+	font-weight: bold; 
+	padding-bottom:2px; 
+	text-align: left;
+	color: #333333;
+}
+
+#leftcolumn div.blockContent {
+	padding: 0px 1px 3px 0;
+	border-bottom: 1px solid #D3D3D3;
+	margin-bottom: 20px;
+}
+
+
+#rightcolumn {margin:15px 0; margin-left:2px;}
+
+#rightcolumn th { }
+
+#rightcolumn div.blockTitle { font-weight: bold; padding-bottom:2px; text-align: left; color: #333333;}
+
+#rightcolumn div.blockContent {padding:0px 2px 3px 0; border-bottom: 1px solid #D3D3D3; margin-bottom:20px;}
+
+/*END COLUMN LAYOUT*/
+
+/* Style specifications for menus/navigation (usually in left/right cols)*/
+td#mainmenu a {padding:0; margin:0;}
+
+td#mainmenu a:hover { }
+
+td#mainmenu a.menuTop {margin-top:0px; padding: 0;}
+
+td#mainmenu a.menuMain {padding:1px 1px 1px 0px; display:block;}
+
+td#mainmenu a.menuSub {padding:1px 1px 1px 6px; color:#990000; display:block;}
+
+td#usermenu a.menuTop {margin-top:0px; padding: 0;}
+
+td#usermenu a {padding:1px 1px 1px 0px; display:block;}
+
+td#usermenu a:hover { }
+
+td#usermenu a.highlight {font-weight: normal; background-color:#D7F0FF; color:#C80000;}
+
+	/* Other classes (Used from content modules like News/Smartsection...)*/
+.item { margin-bottom: 22px; border-bottom: 1px solid #dcdcdc;}
+.item p, .item img  {padding: 0; margin:0;}
+
+.itemHead {}
+
+.itemInfo {text-align: left; padding: 1px 0 4px 0; font-size: 0.85em; color:#66666;}
+
+.itemTitle {	
+	font-weight: normal;
+	font-size: 1.6em;	
+}
+
+.itemPoster { }
+
+.itemPostDate { }
+
+.itemStats { }
+
+.itemBody  {padding: 6px 0;}
+
+html>body .itemBody img {margin:7px 7px 2px 7px;}  /*shows only in ffox/opera*/
+
+.itemText { padding: 0 0 3px 0; line-height: 16px;	}
+
+.itemText:first-letter { }
+
+.itemFoot { padding: 3px 0 3px 0; text-align: right; font-size: 0.85em;}
+
+.itemAdminLink {}
+
+.itemPermaLink {}
+
+		/* System Classes (like redirection, citation/code insert in comments or forum posts and user details for comments/forum posts)*/
+div.errorMsg { }
+
+div.confirmMsg { }
+
+div.resultMsg { }
+
+div.xoopsCode { 
+	background-color: #FFFFEC; 
+	border: 1px dotted #0066CC; 
+	font-family: "Courier New", Courier, monospace; 
+	padding: 7px 8px 8px 15px; 
+	overflow: auto; 
+	margin: 6px 0 4px 0;
+	width:auto;
+	max-height:300px;
+	font-size: 11px;
+}
+
+div.xoopsQuote {
+	background-color: #F4FAFF; 
+	border: 1px dashed #000080; 
+	font-family: "Courier New",Courier,monospace; 
+	padding: 7px 8px 8px 15px; 
+	overflow: auto; 
+	margin: 6px 0 4px 0;
+	font-size:0.9em;
+	max-height:300px;
+	width:auto;
+	font-size: 11px;
+}
+
+* html div.xoopsCode, * html div.xoopsQuote {width:450px;}
+
+.comTitle {padding-left:8px; }
+
+.comText {padding:3px 5px; line-height:16px;}
+
+.comUserStat {padding: 2px 2px; font-size: 0.8em; border:1px dotted #C4E0F0; margin:2px; font-weight: bold; background-color: #ffffff; line-height:1.1em;}
+
+.comUserStatCaption {font-weight: normal;}
+
+.comUserStatus {padding:2px; }
+
+.comUserRank { }
+
+.comUserRankText {padding: 1px 5px; font-size: 0.8em; font-weight: bold; }
+
+.comUserRankImg { }
+
+.comUserName {padding-left:8px; }
+
+.comUserName  a {} /* Useful for defining a link color for poster userID in CBB*/
+
+.comUserImg { }
+
+.comDate { }
+
+.comDateCaption { }
+
+		/* Special ids for debug output at the bottom of the page */
+#xo-logger-output {
+	width: 99%;
+	border: 1px solid #0066CC;
+	margin-top: 6px;
+	background-color: #ffffff;
+}
+
+#xo-logger-tabs { /* Useful for styling debug output */	
+	padding: 3px 5px;
+	background-color: #f5f5f5;
+}
+
+#xo-logger-queries {
+	width:100%;
+	overflow: auto;
+}
+    	/* Custom classes/id for xoops items */
+.xobanner { text-align: center; width:100%; padding-top:7px; margin-top:1px; }
+
+.redirect_block {
+  text-align:center; 
+  background-color: #f7ftf7; 
+  font-weight :normal; 
+  height:150px; 
+  margin-top:15px; 
+  padding-top:10px;
+}
+
+.small-link { font-size:0.82em; margin-top:3px; }
+
+/*****************************************************************************
+Main layout Structure based on Skidoo Too theme (http://webhost.bridgew.edu/etribou/layouts/skidoo_too/)
+Ported By Ianez - Xoops Italia Staff - www.xoopsitalia.org 
+******************************************************************************/
+

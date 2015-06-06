@@ -1,0 +1,78 @@
+/**************************************************
+	High Contrast stylesheet for Minimalist - Version 2.0
+	Original Concept: davide@bazzmann.it, marco@bazzmann.it
+	Adapted for Xoops by Ianez - www.xoopsitalia.org
+***************************************************/
+
+body {
+	background-color: #000000;
+	font-size : x-small;
+  font-size : small;
+	color: #ff6;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	padding: 15px 15px 15px 15px;
+	font-weight: bold;
+	margin: 10px 10px;
+}
+
+font { font-size: 80% !important; }
+
+a {
+	text-decoration: underline;
+	color: #ff6;
+	font-weight: bold;
+}
+
+a:hover, a:focus {
+	background-color: #ff6;
+	color: #000;
+	font-weight: bold;
+}
+
+div, #wrapper, #header, #footer, #soWrap, #container, .headright, #leftcol, #rightcol, #centercol, #centercolumn, .blockcontent, .pageWidth {
+	font-size: 1.06em;
+	line-height: 130%;
+	width: 100%;
+	font-weight: bold;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	background-color: transparent;
+	border-width: 0;
+	float:none;
+	position: static;
+}
+
+.headleft h1 { font-size: 1.8em;}
+
+#headerbar { font-size: 1.3em; text-align: left; }
+.menu {
+  display: inline;
+  padding:0;  
+  list-style-type:none;
+  white-space:nowrap;    /* keep text on one line */
+  border:1px solid #a9a9a9;
+  border-width: 0;
+  background-color: transparent;
+}
+.menu li { display: inline; padding:0px; margin:0; }
+.menu a { text-decoration: none; border-right:2px solid #ff6; padding-right:6px;}
+.accss { display: none; }
+
+#hideRight { display: none; }
+#hideLeft { display: none; }
+#hideAll_left { display: none; }
+#hideAll_right { display: none; }
+#showLeft { display: none; }
+#showRight { display: none; }
+#activeRight{ display: none;}
+#activeLeft{ display: none;}
+#showAll{ display: inline;}
+#hideAll{ display: none;}
+
+.hidden { position: absolute; top: -1000em; }
+
+td#mainmenu a.menuMain {padding:3px 1px 1px 0px; display:block;}
+td#mainmenu a.menuSub {padding:2px 1px 1px 6px; color:#990000; display:block;}
+td#usermenu a {padding:3px 1px 1px 0px; display:block;}
+
+

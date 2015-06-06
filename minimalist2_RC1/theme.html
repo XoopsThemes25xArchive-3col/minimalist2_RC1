@@ -1,0 +1,298 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+
+<{* Multilanguage code *}>
+<{php}>
+global $xoopsConfig;
+
+if ( file_exists(XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/".$xoopsConfig['language'].".php") ) {
+        include_once XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/".$xoopsConfig['language'].".php";
+    } else {
+        include_once XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/english.php";
+}
+<{/php}>
+
+<title><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> - <{/if}><{$xoops_sitename}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+
+<!-- Meta Tags -->
+<meta name="Description" content="<{$xoops_meta_description}>" />
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="keywords" content="<{$xoops_pagetitle}>,<{$xoops_meta_keywords}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="<{$smarty.const.META_GENER}>" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="revisit-after" content="<{$smarty.const.META_REV_AFT}>" />
+
+<!-- Styles/Relations -->
+<link rel="alternate" type="application/rss+xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+
+<link rel="stylesheet" href="<{$xoops_imageurl}>otherCss/print.css" type="text/css" media="print" />
+<link rel="alternate stylesheet" type="text/css" href="<{$xoops_imageurl}>otherCss/highcontrast.css" title="zoom" rev="zoom" media="screen"/>
+	<!-- Special theme styles (for column hiding) -->
+<link rel="alternate stylesheet" type="text/css" href="<{$xoops_imageurl}>otherCss/nocol.css" title="nocolumns" />
+<link rel="alternate stylesheet" type="text/css" href="<{$xoops_imageurl}>otherCss/noRcol.css" title="norightcol" />
+<link rel="alternate stylesheet" type="text/css" href="<{$xoops_imageurl}>otherCss/noLcol.css" title="noleftcol" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" title="default" />
+
+<!-- Important! - Add specific code from modules -->
+<{$xoops_module_header}>
+
+<!-- JScripts -->
+<script type="text/javascript">
+//<![CDATA[
+<{$xoops_js}>
+//]]>
+</script>
+<script type="text/javascript" src="<{$xoops_imageurl}>styleswitcher.js"></script>
+
+
+<!-- Dublin Core MetaData [DCMI] Tags -->
+<link rel="schema.DC" href="http://purl.org/dc/elements/1.1/" />
+<link rel="schema.DCTERMS" href="http://purl.org/dc/terms/" />
+<meta name="DC.title" lang="<{$xoops_langcode}>" content="<{$xoops_pagetitle}> - <{$xoops_sitename}>" />
+<meta name="DC.creator" content="<{$xoops_sitename}>" />
+<meta name="DC.subject" lang="<{$xoops_langcode}>" content="<{$xoops_meta_keywords}>, <{$xoops_pagetitle}>" />
+<meta name="DC.description" lang="<{$xoops_langcode}>" content="<{$xoops_pagetitle}>, <{$xoops_meta_description}>" />
+<meta name="DC.publisher" content="<{$xoops_sitename}>" />
+<meta name="DC.type" content="<{$smarty.const.META_DCMI_TYP}>" />
+<meta name="DC.format" content="text/html; charset=<{$xoops_charset}>" />
+<meta name="DC.identifier" scheme="DCTERMS.URI" content="<{$xoops_url}>" />
+<meta name="DC.language" scheme="DCTERMS.RFC1766" content="<{$xoops_langcode}>" />
+<meta name="DC.coverage" content="<{$smarty.const.META_DCMI_COV}>" /> 
+<meta name="DC.rights" content="<{$xoops_meta_copyright}>" />
+
+</head>
+
+<body>
+<noscript><{if $xoops_pagetitle !=''}><{$xoops_pagetitle}> : <{/if}><{$xoops_sitename}></noscript>
+<div id="wrapper">
+    <div class="pageWidth">
+
+<!-- HEADER START //////////////////////////-->
+	<div id="header" class="inside">
+
+	<!--Accessible Page Navigation (Hided by css specification) - 
+	The link content has to be contextualized with the site navigation-->
+		<div id="ghostnav">
+                <h4><{$smarty.const.ANAV_SKIP}><a accesskey="3" href="#centercol" title="<{$smarty.const.ANAV_CONT_DESC}>"><{$smarty.const.ANAV_CONT}></a> | <a accesskey="1" href="#leftcol" title="<{$smarty.const.ANAV_LCOL_DESC}>"><{$smarty.const.ANAV_LCOL}></a> | <a accesskey="2" href="#rightcol" title="<{$smarty.const.ANAV_RCOL_DESC}>"><{$smarty.const.ANAV_RCOL}></a></h4>
+		</div>
+		<div class="headright">
+			<p id="acswitch">
+                        <a href="#" onclick="setActiveStyleSheet('nocolumns'); return false;" title="<{$smarty.const.NO_COLUMNS_DESC}>" id="hideAll"><{$smarty.const.NO_COLUMNS}></a><span class="hidden"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet('default'); return false;" title="<{$smarty.const.SHOW_ALL_DESC}>" id="showAll"><{$smarty.const.SHOW_ALL}></a><span class="accss"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet('zoom'); return false;" title="<{$smarty.const.HCONTR_DESC}>" class="accss"><{$smarty.const.HCONTR_ON}></a><span class="accss"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet(''); return false;" title="<{$smarty.const.STYLE_OFF_DESC}>" class="accss"><{$smarty.const.STYLE_OFF}></a>
+		 </p>
+			<div id="searchbox">
+			 <form action="<{$xoops_url}>/search.php" method="get">
+			         <label class="hidden" for="query"><{$smarty.const.SEARCH_LAB}></label>
+							 <input type="text" name="query" id="query" size="14" value="<{$smarty.const.SEARCH_INP}>" onfocus="if (value == '<{$smarty.const.SEARCH_INP}>') {value =''}"/>
+				  <input type="hidden" name="action" value="results" />
+				  <input class="search_butt" type="submit" value="<{$smarty.const.SEARCH_BUT}>" />
+				</form>
+			</div>
+		</div>
+		<hr class="hide"/>
+		
+		<div class="headleft">
+		<h1><a href="<{$smarty.const.HOME_URL}>" accesskey="<{$smarty.const.HOME_AKEY}>" title="<{$smarty.const.HOME_DESC}>"><{$smarty.const.HOME_PAGE}></a></h1>
+                <h3><span><{$xoops_slogan}></span></h3>
+		</div>
+		<hr size="1" noshade="noshade"  class="hide" />
+		
+    <!-- Horizontal HeaderBar -->
+		<div  id="headerbar">
+    <{include file="$xoops_theme/headermenu.html"}>
+    </div>
+		<hr class="hide"/>
+		<!-- Horizontal HeaderBar END -->
+	
+	</div>
+<!-- HEADER End-->
+
+<!-- MAIN COINTAINER ///////////////////////-->
+	<{* Code for different layout structure [1/2 or 3columns]- Allows 3 Columns by default *}>
+	<{if $xoops_showrblock == 1 & $xoops_showlblock  == 1}>
+	<div id="container">
+	<{elseif $xoops_showrblock == '' & $xoops_showlblock  == ''}>
+	<div id="container_nocol">
+	<{elseif $xoops_showrblock == 1}>
+	<div id="container_noLcol">
+	<{else}>
+	<div id="container_noRcol">
+	<{/if}>
+	
+		<div id="innerContainer">
+			<div id="SOWrap">
+				
+				<!-- CENTER COLUMN (Include Module's Content)-->	
+				<div id="centercol">
+						<div class="inside">						
+							
+							<div id="centercolumn">           
+								<{if $xoops_ccblocks}>
+                <!-- Display normal center blocks if any-->		
+								<div id="centerCcolumn">								
+									<!-- Start center-center blocks loop -->
+									<{foreach item=block from=$xoops_ccblocks}>
+										<{include file="$xoops_theme/center_blocks.html"}>
+									<{/foreach}>
+									<!-- End center-center blocks loop -->
+								</div>
+                                                                <hr size="1" noshade="noshade"  class="hide" /><!-- No Css Separator -->
+								<{/if}>
+
+								<{if $xoops_clblocks or $xoops_crblocks}>
+
+								<{if $xoops_clblocks}>
+								<div id="centerLcolumn">
+									<!-- Start center-left blocks loop -->
+									<{foreach item=block from=$xoops_clblocks}>
+										<{include file="$xoops_theme/center_blocks.html"}>
+									<{/foreach}>
+									<!-- End center-left blocks loop -->
+								</div>
+                                                                <{/if}>
+								
+								<br class="hide"/>	
+								
+								<{if $xoops_crblocks}>
+								<div id="centerRcolumn">
+									<!-- Start center-right blocks loop -->
+									<{foreach item=block from=$xoops_crblocks}>
+										<{include file="$xoops_theme/center_blocks.html"}>
+									<{/foreach}>
+									<!-- End center-right blocks loop -->
+								</div>								
+								<{/if}>
+
+                                                                <hr size="1" noshade="noshade"  class="hide" /><!-- Separator, hided by css but visible when css is out -->
+								<{/if}>
+								<!-- End Display normal center blocks -->                                                            
+								<br class="clear" />
+								
+								<{if $xoops_contents}>
+                <!-- Display Content from modules -->
+								<div id="content"><{$xoops_contents}></div>
+                <hr size="1" noshade="noshade"  class="hide" />
+								<!-- End Content from modules -->
+                <{/if}>								
+                <div class="clear"></div>
+                								
+								<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+								  <!-- Start display BOTTOM BLOCKS -->
+									<{if $xoBlocks.page_bottomcenter}>
+									<div id="bottomCcolumn">
+									<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+										<{include file="$xoops_theme/center_blocks.html"}>
+									<{/foreach}>
+									</div>
+                  <hr size="1" noshade="noshade"  class="hide" /><!--Separator, hided by css but visible when css is out -->
+                  <{/if}>                                                     	
+
+									<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+										<div id="bottomLcolumn">
+										<{foreach from=$xoBlocks.page_bottomleft item=block}>
+											<{include file="$xoops_theme/center_blocks.html"}>
+										<{/foreach}>
+										</div>										
+										<br class="hide"/>
+										
+										<div id="bottomRcolumn">
+										<{foreach from=$xoBlocks.page_bottomright item=block}>
+											<{include file="$xoops_theme/center_blocks.html"}>
+										<{/foreach}>
+										</div>
+									<{/if}>								
+								<{/if}>
+								<!-- End display BOTTOM BLOCKS -->							
+              <{if $xoops_banner != '&nbsp;'}>
+              <div class="xobanner"><{$xoops_banner}></div>
+              <{/if}>			
+							</div>
+						</div>
+				</div>
+				<!-- CENTER COLUMN END -->
+				<hr class="hide" />
+				
+				<{if $xoops_showlblock == 1}>
+				<!-- LEFT COLUMN -->
+				<div id="leftcol">
+					<div class="inside">						
+						<!-- Start left blocks loop -->
+						<div id="leftcolumn">
+							<{foreach item=block from=$xoops_lblocks}>
+							<{include file="$xoops_theme/sides_blocks.html"}>
+							<{/foreach}>
+						</div>
+						<!-- End left blocks loop -->
+					</div>
+				</div>
+				<div class="clear"></div>
+        <!-- END LEFT COLUMN -->
+				<{/if}>
+        	
+			</div> <!-- END SOWRAP -->
+			
+			<!-- Rough separator, hided by css but visible when css is disactivated -->
+			<hr size="1" noshade="noshade"  class="hide" />	
+			
+			<{if $xoops_showrblock == 1}>
+      <!-- RIGHT COLUMN -->
+			<div id="rightcol">	
+				<div class="inside">			
+					<div id="rightcolumn">	
+						<!-- Start right blocks loop -->	
+						<{foreach item=block from=$xoops_rblocks}>
+						<{include file="$xoops_theme/sides_blocks.html"}>
+						<{/foreach}>
+						<!-- End right blocks loop -->	
+					</div>
+				</div>	
+			</div>
+      <!-- END RIGHT COLUMN -->			
+			<{/if}>			
+			
+			<div class="clear"></div><!-- !Important for footer view in Gecko browser!-->
+		</div> <!-- End innerContainer-->
+	</div> <!-- End Container-->
+	<br class="hide"/>
+	<hr class="hide"/>
+
+<!-- FOOTER /////////////////////////////-->
+	<div id="footer" class="inside">	   
+		<div class="footleft">
+		<{$xoops_footer}><!-- || Valid <a href="http://validator.w3.org/check?uri=http%3A%2F%2F<{$xoops_url}>%2F&amp;charset=%28detect+automatically%29&amp;doctype=Inline" title="XHTML Valid!" target="_blank">XHtml</a>|<a href="http://jigsaw.w3.org/css-validator/validator?uri=<{$xoops_url}>" title="Valid Cascading Style Sheet" target="_blank">CSS</a>-->
+		</div>
+		<hr size="1" noshade="noshade"  class="hide" />
+		<div class="footright"><a href="<{$smarty.const.RSS_IMG_URL}>" title="<{$smarty.const.RSS_IMG_DESC}>" target="_self"><img src="<{$xoops_imageurl}>images/feed-icon.gif" alt="<{$smarty.const.RSS_IMG_ALT}>" height="16px" width="16px" /></a> | <a href="#wrapper" title="<{$smarty.const.PAGE_TOP_DESC}>"><{$smarty.const.PAGE_TOP}></a></div>		
+	</div><!-- Footer End -->
+
+	<hr size="1" noshade="noshade"  class="hide" />
+  <{if $xoops_showrblock == 1}>
+	<div class="togglerRight">
+	<a onclick="setActiveStyleSheet('norightcol'); return false;" href="#" id="activeRight" title="<{$smarty.const.HIDE_RCOL_DESC}>">[x]</a><a href="#" id="hideRight" onclick="setActiveStyleSheet('default'); return false;" title="<{$smarty.const.SHOW_RCOL_DESC}>">[+]</a><a href="#" id="hideAll_right" onclick="setActiveStyleSheet('nocolumns'); return false;" title="<{$smarty.const.SHOW_RCOL_DESC}>">[x]</a><a href="#" id="showRight" onclick="setActiveStyleSheet('noleftcol'); return false;" title="<{$smarty.const.SHOW_RCOL_DESC}>">[+]</a>
+	</div>
+	<{/if}>
+	<{if $xoops_showlblock == 1}>
+	<div class="togglerLeft">
+	<a onclick="setActiveStyleSheet('noleftcol'); return false;" href="#" id="activeLeft" title="<{$smarty.const.HIDE_LCOL_DESC}>">[x]</a><a href="#" id="hideLeft" onclick="setActiveStyleSheet('default'); return false;" title="Show left column in layout">[+]</a><a href="#" id="hideAll_left" onclick="setActiveStyleSheet('nocolumns'); return false;" title="Show right column in layout">[x]</a><a href="#" id="showLeft" onclick="setActiveStyleSheet('norightcol'); return false;" title="<{$smarty.const.SHOW_LCOL_DESC}>">[+]</a>
+	</div>
+	<{/if}>
+</div> <!-- pageWidth div (for IE min-width hack) End -->
+</div> <!-- Wrapper End -->
+</body>
+</html>
+
+<!--/////////////////////////////////////////////////////////////////////////////////////
+Minimalist 2.0 - Version 1 - 15 Genuary 2008
+By Ianez - Xoops Italia Staff - www.xoopsitalia.org
+Structure based on Skidoo Too theme (http://webhost.bridgew.edu/etribou/layouts/skidoo_too/)
+/// Please respect opensource, always keep/show a visible trace of your source ///
+/////////////////////////////////////////////////////////////////////////////////////////-->

@@ -1,0 +1,60 @@
+@import url(../style.css); 
+/* NoColumn style for Minimalist - Version 2 - 20/01/08 - by Ianez              
+********************************************************************************/
+
+#innerContainer {
+	border-color: #666666;
+}
+
+#container
+{
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+#container_noRcol  /*reserves space for the left column */
+{	
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+#container_nocol /* for no column layout */
+{	
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+#container_noLcol  /*reserves space for the right column */
+{	
+	border-left-width: 0;
+	border-right-width: 0;
+}
+
+#leftcol
+{
+	display: none;
+}
+
+#rightcol
+{
+	display: none;
+}
+
+#activeRight
+{
+ display: none;
+}
+
+#activeLeft
+{
+ display: none;
+}
+
+#hideRight { display: none; }
+
+#hideLeft { display: none; }
+
+#showLeft { display: inline; }
+#showRight { display: inline; }
+#showAll { display: inline; }
+#hideAll { display: none; }

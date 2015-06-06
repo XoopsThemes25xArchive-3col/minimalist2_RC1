@@ -1,0 +1,177 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+
+<title><{$xoops_sitename}> - <{$xoops_pagetitle}></title>
+<link href="<{$xoops_url}>/favicon.ico" rel="SHORTCUT ICON" />
+
+<!-- Meta Tags-->
+<meta name="Description" content="<{$xoops_meta_description}>" />
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<meta name="Keywords" content="<{$xoops_meta_keywords}>" />
+<meta name="rating" content="<{$xoops_meta_rating}>" />
+<meta name="author" content="<{$xoops_meta_author}>" />
+<meta name="copyright" content="<{$xoops_meta_copyright}>" />
+<meta name="generator" content="XOOPS" />
+<meta name="robots" content="<{$xoops_meta_robots}>" />
+<meta name="revisit-after" content="7 days" />
+
+<!-- Styles/Relations -->
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="screen" href="<{$xoops_themecss}>" />
+<link rel="alternate" type="application/xml" title="RSS" href="<{$xoops_url}>/backend.php" />
+
+<!-- Important! - Add specific code from modules -->
+<{$xoops_module_header}>
+
+<!-- JScripts -->
+<script type="text/javascript">
+<!--
+<{$xoops_js}>
+//-->
+</script>
+
+</head>
+
+<body>
+
+<!-- Header -->
+<div>
+	<hr />
+	<h1>
+	<a href="<{$xoops_url}>" title="Start page [Acc-Key: H]" accesskey="H" target="_self"><{$xoops_sitename}></a>
+	</h1>
+	<h3>
+	<{$xoops_pagetitle}>
+	</h3>
+	<hr />
+</div>
+<!-- Header End-->
+
+<!-- LEFT COLUMN -->
+	<{if $xoops_showlblock == 1}>
+	
+	<!-- Start left blocks loop -->
+	<div id="leftcolumn">
+	<{foreach item=block from=$xoops_lblocks}>
+	<{include file="$xoops_theme/sides_blocks.html"}>
+	<{/foreach}>
+	</div>
+	<!-- End left blocks loop -->
+	
+	<{/if}>	
+<!-- END LEFT COLUMN -->
+
+<!-- Rough separator, hided by css but visible when css is disactivated -->
+<hr size="1" noshade="noshade"  class="hide" />
+	
+<!-- RIGHT COLUMN -->
+	<{if $xoops_showrblock == 1}>	
+		
+	<div id="rightcolumn">	
+	<!-- Start right blocks loop -->	
+	<{foreach item=block from=$xoops_rblocks}>
+	<{include file="$xoops_theme/sides_blocks.html"}>
+	<{/foreach}>
+	<!-- End right blocks loop -->	
+	</div>
+	
+	<{/if}>	
+<!-- END RIGHT COLUMN -->
+
+<!-- Rough separator, hided by css but visible when css is disactivated -->
+<hr size="2" noshade="noshade"  class="hide" />
+
+<!-- CENTER COLUMN (Include Module's Content)-->	
+	
+	<!-- Display normal center blocks if any-->
+	<div id="centercolumn">
+		
+		<{if $xoops_ccblocks}>		
+		<div id="centerCcolumn">
+		<!-- Start center-center blocks loop -->
+		<{foreach item=block from=$xoops_ccblocks}>
+		<{include file="$xoops_theme/center_blocks.html"}>
+		<{/foreach}>
+		<!-- End center-center blocks loop -->
+		</div>		
+		<{/if}>
+		
+		<!-- Rough separator, hided by css but visible when css is disactivated -->
+		<hr size="1" noshade="noshade"  class="hide" />		
+		
+		<{if $xoops_clblocks}>
+		<div id="centerLcolumn">
+		<!-- Start center-left blocks loop -->
+		<{foreach item=block from=$xoops_clblocks}>
+		<{include file="$xoops_theme/center_blocks.html"}>
+		<{/foreach}>
+		<!-- End center-left blocks loop -->
+		</div>
+		<{/if}>
+		
+		<br class="hide"/>	
+		
+		<{if $xoops_crblocks}>
+		<div id="centerRcolumn">
+		<!-- Start center-right blocks loop -->
+		<{foreach item=block from=$xoops_crblocks}>
+		<{include file="$xoops_theme/center_blocks.html"}>
+		<{/foreach}>
+		<!-- End center-right blocks loop -->
+		</div>
+		<{/if}>
+		
+		<!-- End Display normal center blocks -->		
+		<br class="clear" />		
+		
+		<!-- Display Content from modules -->
+		<{if $xoops_contents}>
+		<div id="content"><{$xoops_contents}></div>
+		<{/if}>
+		<!-- End Content from modules -->
+		
+		<!-- Rough separator, hided by css but visible when css is disactivated -->
+		<hr size="1" noshade="noshade"  class="hide" />
+		
+		<!-- Start display CENTER BOTTOM BLOCKS -->
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+		
+		<{if $xoBlocks.page_bottomcenter}>
+			<div id="bottomCcolumn">
+			<{foreach from=$xoBlocks.page_bottomcenter item=block}>
+			<{include file="$xoops_theme/center_blocks.html"}>
+			<{/foreach}>
+			</div>
+		<{/if}>
+		
+		<!-- Rough separator, hided by css but visible when css is disactivated -->
+		<hr size="1" noshade="noshade"  class="hide" />
+		
+		<{if $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright}>
+			<div id="bottomLcolumn">
+			<{foreach from=$xoBlocks.page_bottomleft item=block}>
+			<{include file="$xoops_theme/center_blocks.html"}>
+			<{/foreach}>
+			</div>
+			
+		<br class="hide"/>
+			
+			<div id="bottomRcolumn">
+			<{foreach from=$xoBlocks.page_bottomright item=block}>
+			<{include file="$xoops_theme/center_blocks.html"}>
+			<{/foreach}>
+			</div>
+		<{/if}>
+		
+		<{/if}>
+		<!-- End display CENTER BOTTOM BLOCKS -->
+	</div>
+<!-- End display CENTER COLUMN -->
+
+<br class="clear"/>
+<hr />
+<{$xoops_footer}>
+</body>
+</html>

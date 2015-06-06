@@ -1,0 +1,54 @@
+------------------------------------------------------------------------------------
+--------------------- MINIMALIST ---------------------------------------------------
+---------------------------------------------------- CHANGELOG ---------------------
+
+------------------------------------
+# Versione 2.0 Rc1 #
+------------------------------------
+
+#Funzionalità#
+---------------------------
+- Aggiunto multilingua integrato e nel tema che permette anche il controllo su voci di menu e altro
+- Inserite traduzione inglese e italiana (cartella /language/[nomelingua])
+- Aggiunti templates personalizzati per: redirect, opzioni notifica e sito chiuso (in override).
+- Ottimizzati i templates dei principali blocchi di sistema (override)
+- Integrati templates personalizzati/ottimizzati per i menu css di multimenu (override)
+- Inizio mantentimento changelog e aggiornamento documentazione
+
+
+#Accessibilità-Validazione-SEO#
+-------------------------------
+- Inserito attributo <title> per i link dei principali blocchi di sistema
+- Inseriti label/id per blocchi di sistema con form
+- Inserito label per input ricerca nella testata
+- Eliminati stili inline per blocchi di sistema principali
+- <noscript> per link jscript dei blocchi di sistema
+- Ottimizzato layout alto-contrasto
+- Varie migliorie per adeguamento alle linee guida WCAG 1.0 (Singola A)
+- Ottimizzazione SEO (titoli di pagina, DCMI..)
+
+
+#Modifiche codice-Fixings#
+--------------------------
+- Stabilizzato il codice del menu orizzontale, (ora è possibile aggiungere anche parole lunghe).
+- Aggiunto condizionale per banner xoops (nasconde lo stile se si disattiva la rotazione)
+- l'id pageWrapper ora è wrapper
+- l'id min- width ora è pagewidth
+- l'id wrapper controlla adesso il bordo esterno dell'intero layout
+- Il menu orizzontale si carica ora da file esterno (headermenu.html)
+- Commentato il link 'Nessuno Stile' nell'header
+- Aumentata la larghezza delle colonne (13em)
+- Aggiunto stile per debug a fondo pagina
+
+- Risolti bug vari di visualizzazione in modalità 1/2 colonne.
+- Risolti bug per ie7 e attivato riconoscimento automatico feed RSS (sempre ie7)
+- Risolti bug mennu/visualizzazione per Firefox/Safari Mac
+- Migliorie varie estetiche e di leggibilità
+- Revisione del codice html e css, ora più stabile e scalabile
+
+----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------
+--- Creato da Ianez | 20/01/08 ---- Xoops Italia Staff ---- www.xoopsitalia.org ---
+-----------------------------------------------------------------------------------

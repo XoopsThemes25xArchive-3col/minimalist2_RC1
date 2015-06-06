@@ -1,0 +1,76 @@
+----------------------------------------------------------------------------------------
+---------- Structure of Minimalist theme (html/css) for Xoops --------------------------
+----------------------------------------------------------------------------------------
+
+---- Main Concept -----
+-----------------------
+As the original (skidoo too) Minimalist is a float based layout using the negative-margin technique to have a 1/2/3 column liquid layout where content come first (ordered source) and where the three columns have always the same height, can have background colors and also borders.
+
+
+-- HTML Structure tree --
+-------------------------
+For better comprehension and easy customization here you have the tree of the different container and divs used and needed for the final result.
+Two scores added means a level contained in the level before. 
+Same score number = same level and div at the same level (not nested).
+
+
+-- pageWrapper	 (main container of the layout)
+---- min-width	 (needed for having a min-width in IE without jscript (hack ported from cssplay.co.uk)
+------ header	 (contains the top side of the layout with horizontal menu)
+
+------ container (where all the content is stored, it reserves space for the left and right columns)
+-------- innercontainer 	(needed for border and margin compensation)
+
+---------- SoWrap 		(floating box containing center and left column)
+------------ inside  		(the purpose of this div is to provide horizontal padding without hacks)
+-------------- centercol 	(the effective center column)
+---------------- inside
+------------------ centercolumn (contains the normal classes/ids for xoops themes)
+-------------- leftcol 		(the effective left column, same width of container's border-left)
+---------------- inside
+
+----------- rightcol		(column, out from sowrap, same width of container's border-left)
+------------- inside
+
+------ footer			(container for the bottom of the page)
+-------- inside
+
+
+
+-- CSS sections --
+------------------
+All the style is organized in one file for easier customization.
+It is entirely divided in conceptual sections for better use.
+The style/design elements are mainly in the fourth section, so color changes, paddings or else can be customized at a glance.
+
+(1) HTML TAGS (all the style for html elements such as a, table, forms..)
+(2) THEME LAYOUT (ids/classes for the theme structure (design elements are not here))
+	- Header
+	- Horizontal menu style
+	- classes for hiding columns (toggleLeft...)
+	- Accessibilty elements (ghostnav...) 
+	- Main container (container, centercol... all of the above divs.. Attention to changes here!)
+(3) General purpose classes/ids (for hiding boxes or clear lines..)
+(4) REQUESTED/USED BY XOOPS (all the standard classes/ids used in xoops are here)
+	- Main Classes for table's visualization/discrimination (even, odd head..)
+	- Columns layout (center blocks, blockTitle, mainmenu link..)
+	- Other classes (itemTitle, itemText..)
+	- System Classes (comTitle, comUser, xoopsQuote..)
+	- Debug ids (styles for the new debug system)
+
+
+
+-----------------------------------------------------------------------------------
+--- Created by Ianez | 08/2007 ----- Xoops Italia Staff ---- www.xoopsitalia.org --
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

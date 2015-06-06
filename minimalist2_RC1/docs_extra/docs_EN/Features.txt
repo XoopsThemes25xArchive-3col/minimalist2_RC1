@@ -1,0 +1,59 @@
+------------------------------------------------------------------------------------
+--------------------- MINIMALIST THEME ---------------------------------------------
+---------------------------------------------------- Main features -----------------
+
+
+[[Layout]]
+----------
+- Working automatically with 1/2/3 columns (thanx smarty)
+- Toggling system for 1/2/3 column layout (setting stored in a cookie)
+- Multilanguage System (no hacks needed, look at /language folder)
+- Resizable under IE6 (min-width hack ported from http://www.cssplay.co.uk/boxes/minwidth.html
+- Override templates for: main/user menu,  who's online blocks, redirect, siteclosed, notification, multimenu
+- Css completely reordered and restructured for Xoops
+- Center colomn coming first during loading.
+- Html and Css commented for easy customization
+- Fast loading. Very little use of JScript
+- Special styles for forms and xoops components 
+- clean, simple design
+- Ready for Xoops 2.0.14 and following (working also on 2.0.13..)
+
+
+[[Accessibilty/Usability]]
+--------------------------
+- Entirely Css based layout, usable also with non css capable browsers
+- Zoom/High contrast layout for low vision users
+- Accessible special navigation for non css browsers
+- Access Keys in link titles
+- WAI-A COnformance 
+- Em sizes for fonts
+- Special CSS for print (take a look at print preview in your browser)
+
+- Tested and working with FFox 1.5/2, IE 6/7, Opera 8/9.
+- Working with Firefox 2/Safari 3 for Mac
+- Good feedback from Mac and linux browsers.
+- Dublin Core Metatag inserted and auto-set via smarty variables (see http://dublincore.org/ for infos)
+- Search engine optimization as in http://www.xoops.org/modules/smartfaq/faq.php?faqid=362
+
+
+-----------------------------
+*From Skidoo*
+-----------------------------
+- 3 column liquid layout pure css
+- Equal height columns (able to have their own bacKground)
+- Content loading first in the page
+- Working nicely for IE and ffox (pc and mac)
+- valid xhtml code
+- valid css level2
+
+
+[[Extra]]
+----------
+- Smarty variables list (Docs_extra folder)
+- Basic php/html static page model.
+- Documentation on theme structure
+
+-----------------------------------------------------------------------------------
+--- Created by Ianez | 08/2007 ----- Xoops Italia Staff ---- www.xoopsitalia.org --
+--- Updated on: 20/01/2008 --------------------------------------------------------
+-----------------------------------------------------------------------------------

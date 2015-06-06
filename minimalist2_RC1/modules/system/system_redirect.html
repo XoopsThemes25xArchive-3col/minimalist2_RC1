@@ -1,0 +1,44 @@
+<{if $xoops_theme == 'default'}>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+<title><{$xoops_sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+</head>
+<body>
+<noscript> <h1><{$xoops_pagetitle}> </h1> </noscript>
+
+<div style="font-family: Verdana, Arial, Helvetica, sans-serif; text-align:center; background-color: #EBEBEB; border-top: 1px solid #FFFFFF; border-left: 1px solid #FFFFFF; border-right: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; font-weight : bold; padding:15px; margin-top:5px;">
+  <h5 style="margin:0; padding:0;"><{$message}></h5>
+  <br />
+  <hr size="1" noshade="noshade"  width="70%" align="center" />
+  <h5><{$lang_ifnotreload}></h5>
+</div>
+</body></html>
+<{else}>
+<{php}>
+include XOOPS_ROOT_PATH . '/mainfile.php';
+include XOOPS_ROOT_PATH . '/header.php';
+<{/php}>
+<meta http-equiv="Refresh" content="<{$time}>; url=<{$url}>" />
+<style type="text/css">
+   .xobanner {display:none;}
+</style>
+		
+							<div class="redirect_block">
+                  <img src="<{$xoops_imageurl}>images/ajax_indicator.gif" alt="<{$message}>"/>
+                  <br /><br />
+                  <h4><{$message}></h4>                  
+                  <br />
+                  <hr size="1" noshade="noshade"  width="70%" align="center" />
+                  <p><{$lang_ifnotreload}></p>							
+							</div>
+
+
+<{php}>
+include XOOPS_ROOT_PATH.'/footer.php';
+<{/php}>
+<{/if}>
+<{if $xoops_logdump != ''}><div><{$xoops_logdump}></div><{/if}>
+

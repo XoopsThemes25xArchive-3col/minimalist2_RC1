@@ -1,0 +1,58 @@
+------------------------------------------------------------------------------------
+--------------------- MINIMALIST ---------------------------------------------------
+----------------------------------------------------- CARATTERISTICHE GENERALI -----
+
+[[Layout]]
+----------
+- Tema funzionante con 1/2/3 colonne visualizzate
+- Colonne a scomparsa da bottone, per aumentare la leggibilità (l'impostazione viene salvata in cookie)
+- Sistema multilingua e controllo delle voci/link del tema da file unico
+- Ridimensionabile in ie6 (hack per la larghezza minima integrato da: www.cssplay.co.uk/boxes/minwidth.html)
+- Templates personalizzati per: blocco menu principale/utente, redirect, sito chiuso, notifiche, multimenu.
+- Css organizzato e implementato per Xoops
+- Colonna centrale caricata per prima nella pagina
+- Commenti HTML e CSS per un'immediata personalizzazione
+- Caricamento molto rapido. Jscript molto leggero.
+- Stili speciali per form ed elementi Xoops
+- Design semplice e struttura solida per qualsiasi personalizzazione.
+- Compatibile con Xoops 2.0.14 e successivi, funzionante (ma non testato) anche con xoops 2.0.13
+
+
+[[Accessibilità/Usabilità]]
+---------------------------
+- Tema interamente in CSS, senza tabelle, navigabile anche con css disattivato.
+- Layout ad alto contrasto per utenti ipovedenti
+- Navigazione accessibile per browser che non visualizzano il css.
+- Access Keys per tutti i link della testata
+- XHTML 1.0 Valid e CSS 2 valido.
+- Conforme alle regole WAI-A
+- DImensione dei font in 'em' (maggiore scalabilità)
+- Css speciale per la stampa (visibile da Anteprima di stampa del browser)
+
+- Testato e verificato con Firefox 1.5/2, IE 6/7, Opera 8/9
+- Compatibile con Firefox 2/Safari 3 per Mac
+- Buon feedback da browsers in ambiente linux
+- Metatag Dublin Core (DCMI) inserite e pre-impostate via smarty
+- Ottimizzato per i motori di ricerca come da articolo: www.xoops.org/modules/smartfaq/faq.php?faqid=362
+
+
+-----------------------------
+*Dal tema originale "Skidoo"*
+-----------------------------
+- Layout liquido (larghezza variabile) in css a 3 colonne
+- Colonne di altezza uguali (che possono avere bordo o colore di sfondo)
+- Colonna centrale caricata per prima rispetto alle laterali
+
+
+-----------------------------
+[[Extra]]
+-----------------------------
+- Lista di tutte le variabili XOOPS (cartella docs_extra)
+- Modello di Pagina base in php per inserire pagine personalizzate speciali in Xoops
+- Documentazione in italiano e inglese (struttura, caratteristiche, changelog..) 
+
+
+-----------------------------------------------------------------------------------
+--- Ianez | 08/2007 --------------- Xoops Italia Staff ---- www.xoopsitalia.org ---
+--- Aggiornato il: 25/01/08 -------------------------------------------------------
+-----------------------------------------------------------------------------------

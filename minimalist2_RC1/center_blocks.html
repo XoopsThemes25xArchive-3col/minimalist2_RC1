@@ -1,0 +1,10 @@
+<{if $xoops_clblocks or $xoops_ccblocks or $xoops_crblocks or $xoBlocks.page_bottomleft or $xoBlocks.page_bottomright or $xoBlocks.page_bottomcenter}>
+<!-- Center area content -->
+<{if $block.title == ''}> <{* Useful for diplaying well blocks with no title *}>
+<div class="blockContent"><{$block.content}></div>
+<{else}>
+<div class="blockTitle"><{$block.title}></div>
+<div class="blockContent"><{$block.content}></div>
+<{/if}>
+<!-- Center Content end -->
+<{/if}>

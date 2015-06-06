@@ -1,0 +1,111 @@
+----------------------------------------------------------------------------------------
+---------- Structure of Minimalist theme (html/css) for Xoops --------------------------
+----------------------------------------------------------------------------------------
+
+--- Tecnica di base ---
+-----------------------
+Minimalist è un tema che si basa interamnete sul float (posizionamento) di box definiti dal tag DIV.
+Utilizza la tecnica dei margini negatvi per posizionare i box delle colonne sui lati e generare un layout
+liquido, dove il blocco centrale viene caricato per primo e dove le colonne hanno uguale altezza, possono
+avere bord, un colore di sfondo e con qualche modifica anche immagini di sfondo.
+
+
+-- Albero Struttura theme.html --
+---------------------------------
+Per intervenire al meglio sul tema e personalizzarlo segue una lista delle principali class/id utilizzate
+nel tema, collocate secondo il loro ordinamento nel codice html (theme.html)
+L'aggiunta di due trattini significa che quell'elemento e contenuto (figlio) nell'elemento che precede,
+stesso numero di trattini indica che gli elementi sono su pari livello e non in relazione.
+
+NOTA!
+Il theme.html è impostato in modo tale da NON avere al suo interno ALCUNO stile, è sostanzialmente uno scheletro vuoto,
+gestito e articolato dal foglio di stile [style.css]. 
+Per qualsiasi personalizzazione al layout e alla grafica lavorate sul foglio di stile.
+
+
+-- wrapper	 (Box principale del tema, che gestisce il bordo del layout)
+---- pageWidth	 (box aggiuntivo necessario per avere una larghezza minima in ie6 (hack da cssplay.co.uk)
+------ header	 (testata del sito, ad altezza fissa)
+-------headerbar (contiene il richiamo all'html del menu orizzontale [headermenu.html])
+
+------ container (box con i contenuti, riserva lo spazio per le colonne dx e sx se necessario)
+-------- innercontainer 	(box necessario per compensare bordi e margini)
+
+---------- SoWrap 		(floating box che allinea la colonna sx e centrale)
+------------ inside  		(necessario per avere padding orizzontale senza bisogno di hack)
+-------------- centercol 	(il box xhe contiene tutto il codice della colonna centrale)
+---------------- inside
+------------------ centercolumn (contiene le classi/id stanard per xoops)
+-------------- leftcol 		(box per la colonna di sinistra, DEVE avere la stessa 'width' del bordo sinistro del container)
+---------------- inside
+
+----------- rightcol		(box per la colonna di destra, DEVE avere la stessa 'width' del bordo destro del container)
+---------------- inside
+------------- inside
+
+------ footer			(box che contiene tutto il piede di pagina)
+-------- inside
+
+
+- Le voci del menu orizzontale possono essere aggiunte lavorando sul file: headermenu.html,
+se volete modificarle o cambiare i link potete lavorare direttamente sui file di lingua in /language 
+- Il codice html per la colonna centrale e laterale è contenuto nei files: center_blocks.html e sides_blocks.html
+
+
+
+-- Struttura style.css --
+-------------------------
+Tutto il fogli di stile è raccolto in un unico file,
+ed è suddiviso in aree concettuali per maggiore semplicità di utilizzo.
+Gli elementi di stile e design (colori, spazi ecc..) sono localizzati principalmente nella quarta sezione.
+
+NOTA!
+All'interno del foglio di stile NON ci sono ripetizioni di classi o id o attributi.
+Il che significa che se modificate una voce css sarete certi di modificarla per tutto il tema.
+L'unica voce che viene gestita in due punti differenti è il tag body, all'inizio della sezione 1 e 2.
+Il colore dei link viene impostato in sezione 1 e per la colonna centrale in sezione 4 [centercolumn])
+
+(1) HTML TAGS (lo stile per gli elementi html, per esempio: a, table, forms, ul....)
+(2) THEME LAYOUT (id/classi per il posizionamento degli elementi del tema)
+	- Wrapper/body (!Attenzione alle modifiche in questa sezione!)
+	- Header
+	- Horizontal menu style
+	- classes for hiding columns (toggleLeft...)
+	- Accessibilty elements (ghostnav...) 
+	- Main container (container, centercol. e div del Container !Attenzione alle modifiche in questa sezione!)
+(3) General purpose classes/ids (voci per la gestione dei blocchi a scomparsa e piccoli hack..)
+(4) REQUESTED/USED BY XOOPS (id/classi standard utilizzati da Xoops)
+	- Main Classes for table's visualization/discrimination (even, odd head..)
+	- Columns layout (center blocks, blockTitle, mainmenu link..)
+	- Other classes (itemTitle, itemText..)
+	- System Classes (comTitle, comUser, xoopsQuote..)
+	- Debug ids (styles for the new debug system)
+	- Custom classes/id for Xoops Items
+
+
+-- SUGGERIMENTI --
+------------------
+
+Come norma operativa consiglio di lavorare con un buon editor,
+(consiglio vivamente PSP Editor - http://www.pspad.com/it/).
+Per intervenire su colori e simili procedete come segue:
+- visualizzate il sorgente html dell'area di interesse
+- individuate la classe o l'id richiamato dal div (o qualsiasi elemento) che contiene il codice
+- con l'editor cercate il testo esatto
+
+
+-----------------------------------------------------------------------------------
+--- Created da Ianez | 08/2007 ----- Xoops Italia Staff ---- www.xoopsitalia.org --
+--- Aggiornato il 10/02/2008 ------------------------------------------------------
+-----------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+

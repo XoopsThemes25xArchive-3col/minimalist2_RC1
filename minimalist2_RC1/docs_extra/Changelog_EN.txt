@@ -1,0 +1,54 @@
+------------------------------------------------------------------------------------
+--------------------- MINIMALIST ---------------------------------------------------
+---------------------------------------------------- CHANGELOG ---------------------
+
+------------------------------------
+# Version 2.0 Rc1 #
+------------------------------------
+
+#Features#
+---------------------------
+- Added Multilanguage (no hacks needed) (language/english|italian.php)
+- Control of almost any link/title in the theme from one file (/language/yourlanguage.php)
+- Template override for: redirect, notifications (toggle block), closed site
+- Optimization of many system blocks
+- Template override for multimenu blocks
+- Cleaned all inline style from theme.html
+- Added more documentation (/docs_extra folder)
+- Started the changelog maintenance
+
+
+#Accessibility-Compliance-SEO#
+-------------------------------
+- Added <title> attribute for links in -main/User Menu and others
+- Added label/id tag for system block forms and search area in the header.
+- Removed inline styles form system block
+- Added <noscript> for jscript link in online users block 
+- Optimized high-contrast layout
+- Improved the compliance to WCAG 1.0 (Single A) guidelines
+- Improved SEO (pagetitles, DCMI..)
+
+
+
+#Code changes-Fixings#
+--------------------------
+- More flexible and usable horizontal menu (fits to long text also)
+- Added conditional and style class for banne (hide the style without banner rotation)
+- pagewrapper id become: wrapper (and decide the border of layout)
+- min-width id become: pageWidth
+- External file for horizontal menu (headermenu.html)
+- Larger column width (13em)
+- Added style for debug
+
+- Fixed rendering bugs in 1/2 columns mode
+- Fixed rendering bug and automatic rss feed view for Ie7
+- Fixed menu visualization in Firefox/Safari Mac
+- Style and usability improvements
+- Html and Css revised and improved
+
+----------------------------------------------------------------------
+
+
+-----------------------------------------------------------------------------------
+--- Created by Ianez | 20/01/08 ---- Xoops Italia Staff ---- www.xoopsitalia.org ---
+-----------------------------------------------------------------------------------

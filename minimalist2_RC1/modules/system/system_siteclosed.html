@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC '-//W3C//DTD XHTML 1.0 Transitional//EN' 'http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd'>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="<{$xoops_langcode}>" lang="<{$xoops_langcode}>">
+<head>
+<{php}>
+global $xoopsConfig;
+if ( file_exists(XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/".$xoopsConfig['language'].".php") ) {
+        include_once XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/".$xoopsConfig['language'].".php";
+    } else {
+        include_once XOOPS_ROOT_PATH."/themes/".$xoopsConfig['theme_set']."/language/english.php";
+    }
+<{/php}>
+<meta http-equiv="content-type" content="text/html; charset=<{$xoops_charset}>" />
+<meta http-equiv="content-language" content="<{$xoops_langcode}>" />
+<title><{$xoops_sitename}></title>
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_url}>/xoops.css" />
+<link rel="stylesheet" type="text/css" media="all" href="<{$xoops_themecss}>" />
+
+</head>
+<body>
+<noscript> <h1><{$xoops_pagetitle}> </h1> </noscript>
+<div id="wrapper">
+    <div class="pageWidth">
+
+<!-- HEADER START //////////////////////////-->
+	<div id="header" class="inside">
+	   
+	   <!--Accessible Page Navigation (Hided by css specification) - 
+	The link content has to be contextualized with the site navigation-->
+		<div id="ghostnav">
+                <h4>Skip to: <a accesskey="3" href="#centercol" title="Access page contents">Content</a> | <a accesskey="1" href="#leftcol" title="Access the side main menus">Left Column</a> | <a accesskey="2" href="#rightcol" title="Access right column links">Right Column</a></h4>
+		</div>
+		<div class="headright">
+			<p id="acswitch">
+                        <a href="#" onclick="setActiveStyleSheet('nocolumns'); return false;" title="<{$smarty.const.NO_COLUMNS_DESC}>" id="hideAll"><{$smarty.const.NO_COLUMNS}></a><span class="hidden"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet('default'); return false;" title="<{$smarty.const.SHOW_COLUMNS_DESC}>" id="showAll"><{$smarty.const.SHOW_COLUMNS}></a><span class="accss"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet('zoom'); return false;" title="Activate High Contrast Layout" class="accss">High contrast</a><span class="hidden"> | </span>
+                        <a href="#" onclick="setActiveStyleSheet('default'); return false;" title="Return to Normal Layout" class="bscss">Normal Layout</a>
+			</p>
+			<div id="searchbox">
+			 <form style="margin: 0px; padding:0;" action="<{$xoops_url}>/search.php" method="get">
+							 <input type="text" name="query" size="14" value="word..." onfocus="if (value == 'word...') {value =''}"/>
+				  <input type="hidden" name="action" value="results" />
+				  <input class="search_butt" type="submit" value="Search" />
+				</form>
+			</div>
+		</div>
+		<hr class="hide"/>
+		
+		<div class="headleft">
+		<h1><a href="<{$xoops_url}>" accesskey="H" title="Start page [Acc-Key: H]"><{$xoops_sitename}></a></h1>
+                <h3><span><{$xoops_slogan}></span></h3>
+		</div>
+		<hr size="1" noshade="noshade"  class="hide" />
+    
+    <!-- Header Menu-->
+		<hr class="hide"/>
+		<!-- Header Menu End-->
+	
+	</div><!-- HEADER End-->
+
+<!-- MAIN COINTAINER ///////////////////////-->
+	<!-- Code for different layout structure [1/2 or 3columns]- Allows 3 Columns by default >-->
+	<div id="container_nocol">
+
+		<div id="innerContainer">
+			<div id="SOWrap">
+				
+				<!-- CENTER COLUMN (Include Module's Content)-->	
+				<div id="centercol" >
+						<div class="inside">
+ 							<div id="centercolumn" style="text-align:center; background-color: #f7ftf7; font-weight : bold; height:300px; margin-top:50px; padding-top:50px;">
+              <div style="background-color: #FFC64F; color: #091B36; text-align: center; border-top: 1px solid #DDDDFF; border-left: 1px solid #DDDDFF; border-right: 1px solid #AAAAAA; border-bottom: 1px solid #AAAAAA; font-weight: bold; padding: 10px; width:70%; margin: 0 auto;"><{$lang_siteclosemsg}></div>
+              <br /> 
+ 
+  <form action="<{$xoops_url}>/user.php" method="post">
+    <div style="background-color:#f7f7f7; padding :1px; text-align:left; border: 1px solid #d9d9d9; width:195px; margin: 0 auto;">
+      <div style="background-color:#08c; color: #FFFFFF; padding : 4px; text-align:center;">
+    <{$lang_login}><br />
+      </div>
+      <div style="padding :6px 4px; text-align:left;">    
+      <{$lang_username}><input type="text" name="uname" size="12" value="" /><br />
+      <span style="padding-left:24px;">
+      <{$lang_password}><input type="password" name="pass" size="12" />
+      </span>
+      <input type="hidden" name="xoops_redirect" value="<{$xoops_requesturi}>" />
+      <input type="hidden" name="xoops_login" value="1" /><br />
+      <span style="padding-left:50px; padding-top:2px;">
+      <input style="margin-top:7px;" type="submit" value="<{$lang_login}>" />
+      </span>
+      </div>
+    </div>
+        
+  </form>
+
+							</div>
+						</div>
+				</div>
+				<!-- CENTER COLUMN END -->
+	
+			</div> <!-- END SOWRAP -->
+			
+			<div class="clear"></div><!-- !Important for footer view in Gecko browser!-->
+		</div> <!-- End innerContainer-->
+	</div> <!-- End Container-->
+
+<!-- FOOTER /////////////////////////////-->
+	<br class="hide"/>
+	<hr class="hide"/>
+	<div id="footer" class="inside">
+		<div class="footleft">
+		<{$xoops_footer}>
+		</div>
+		<hr size="1" noshade="noshade"  class="hide" />
+		<div class="footright"><a href="<{$xoops_url}>/backend.php" title="Right click, copy and paste the link for Rss feed aggregators" target="_self"><img src="<{$xoops_imageurl}>/images/feed-icon.gif" alt="RSS 2.0" height="16px" width="16px" /></a> | <a href="#pageWrapper" title="Return to top of the page">Page top</a> |</div>
+		
+	</div>
+<!-- Footer End -->
+	<hr size="1" noshade="noshade"  class="hide" />		<{if $xoops_showrblock == 1}>
+	<div class="togglerRight">
+	<a onclick="setActiveStyleSheet('norightcol'); return false;" href="#" id="activeRight" title="Hide Right Column from layout">[x]</a><a href="#" id="hideRight" onclick="setActiveStyleSheet('default'); return false;" title="Show right column in layout">[+]</a><a href="#" id="hideAll_right" onclick="setActiveStyleSheet('nocolumns'); return false;" title="Show right column in layout">[x]</a><a href="#" id="showRight" onclick="setActiveStyleSheet('noleftcol'); return false;" title="Show right column in layout">[+]</a>
+	</div>
+	<{/if}>
+	<{if $xoops_showlblock == 1}>
+	<div class="togglerLeft">
+	<a onclick="setActiveStyleSheet('noleftcol'); return false;" href="#" id="activeLeft" title="Hide Left Column from layout">[x]</a><a href="#" id="hideLeft" onclick="setActiveStyleSheet('default'); return false;" title="Show left column in layout">[+]</a><a href="#" id="hideAll_left" onclick="setActiveStyleSheet('nocolumns'); return false;" title="Show right column in layout">[x]</a><a href="#" id="showLeft" onclick="setActiveStyleSheet('norightcol'); return false;" title="Show left column in layout">[+]</a>
+	</div>
+	<{/if}>
+</div> <!-- Min-Width DIv for IE End -->
+</div> <!-- PageWrapper End -->
+
+  </body>
+</html>
